@@ -1,1 +1,233 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+	background: #3e434e;
+}
+.wrapper {
+  .header {
+    z-index: 1;
+		position: relative;
+		width: calc(100% - 230px);
+		margin-left: 230px;
+		top: 0;
+    .navbar-bg {
+      background: #38a2d1;
+    }
+    .navbar .nav {
+      a {
+        color: aliceblue;
+        text-decoration: none;
+        &:hover {
+          color: #bbeaff;
+        }
+      }
+      .dropdown .dropdown-menu {
+        background: #3e434e;
+        .dropdown-item:hover {
+          background: lighten(#3e434e, 10%);
+        }
+      }
+    }
+  }
+  .sidebar {
+		z-index: 1;
+		background: #3e434e;
+		position: fixed;
+		top: 0;
+		width: 230px;
+		height: calc(100% - 0%);
+		transition: 0.2s;
+		transition-property: width;
+		overflow-y: auto;
+		.sidebar-menu {
+			overflow: hidden;
+			.logo {
+				text-align: center;
+				img {
+					margin: 20px 0;
+					width: 100px;
+					height: 100px;
+					border-radius: 50%;
+				}
+				p {
+					color: #bbb;
+					font-weight: 700;
+					margin-bottom: 10px;
+				}
+			}
+			.item {
+        list-style: none;
+				width: 230px;
+				overflow: hidden;
+				.sub-menu {
+					.sub-item {
+						width: 230px;
+						overflow: hidden;
+						.menu-btn {
+							&:hover {
+								color: #eee;
+							}
+							i {
+								margin-right: 0;
+							}
+							.drop-down {
+								float: right;
+								font-size: 12px;
+								margin-top: 3px;
+							}
+						}
+						.sub-menu {
+							background: #FCA402;
+							overflow: hidden;
+							max-height: 0;
+							transition: 0.3s;
+							transition-property: background, max-height;
+							a {
+								display: block;
+								position: relative;
+								color: #323744;
+								white-space: nowrap;
+								font-size: 13px;
+								padding: 10px 20px;
+								border-bottom: 1px solid #bbb;
+								transition: 0.3s;
+								transition-property: background, color;
+								&:hover {
+									background: #FEC804;
+									color: #3e434e;
+									text-decoration: none;
+								}
+							}
+							i {
+								padding-right: 20px;
+								font-size: 12px;
+								padding-right: 35px;
+							}
+						}
+					}
+					background: #FCA402;
+					overflow: hidden;
+					max-height: 0;
+					transition: 0.3s;
+					transition-property: background, max-height;
+					a {
+						display: block;
+						position: relative;
+						color: #323744;
+						white-space: nowrap;
+						font-size: 13px;
+						padding: 10px 20px;
+						border-bottom: 1px solid #bbb;
+						transition: 0.3s;
+						transition-property: background, color;
+						&:hover {
+							background: #FEC804;
+							color: #3e434e;
+							text-decoration: none;
+						}
+					}
+					a.active {
+						background: #FEC804;
+					}
+					i {
+						padding-right: 20px;
+						font-size: 12px;
+					}
+					.sub-item.open {
+						.sub-menu {
+							max-height: 500px;
+						}
+					}
+				}
+				.menu-btn {
+					display: block;
+					color: #fff;
+					font-size: 14px;
+					position: relative;
+					padding: 15px 20px;
+					transition: 0.3s;
+					transition-property: color;
+					&:hover {
+						color: #FEC804;
+						text-decoration: none;
+					}
+					i {
+						margin-right: 20px;
+					}
+					.drop-down {
+						float: right;
+						font-size: 12px;
+						margin-top: 3px;
+					}
+				}
+			}
+			.item.open {
+				.sub-menu {
+					max-height: 500px;
+				}
+			}
+		}
+	}
+  .main-container {
+		width: calc(100% - 230px);
+		margin-top: 0;
+		margin-left: 230px;
+		padding: 15px;
+		background: whitesmoke;
+		height: 100vh;
+	}
+}
+.wrapper.collapsed {
+  .main-container {
+		width: calc(100% - 70px);
+		margin-left: 70px;
+	}
+  .header {
+		width: calc(100% - 70px);
+		margin-left: 70px;
+	}
+  .sidebar {
+		width: 70px;
+		.logo {
+			img {
+				width: 34px;
+				height: 34px;
+			}
+			p {
+				display: none;
+			}
+		}
+		a {
+			span {
+				display: none;
+			}
+		}
+		.sidebar-btn {
+			.item {
+				.menu-btn {
+					i {
+						font-size: 23px;
+					}
+				}
+				.sub-menu {
+					.sub-item {
+						.menu-btn {
+							i {
+								font-size: 23px;
+							}
+						}
+						.sub-menu {
+							i {
+								font-size: 18px;
+								padding-left: 3px;
+							}
+						}
+					}
+					i {
+						font-size: 18px;
+						padding-left: 3px;
+					}
+				}
+			}
+		}
+	}
+}
