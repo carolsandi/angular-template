@@ -11,6 +11,7 @@ $sidebar-background: #3e434e;
 $sidebar-item-color: #fff;
 $sidebar-item-light-color: #FEC804;
 $sidebar-sub-item-color: #3e434e;
-$sidebar-sub-item-background: #FCA402;
+$sidebar-sub-item-light-color: lighten(#3e434e, 10%);
+$sidebar-sub-item-background: #fca402;
 $sidebar-sub-item-light-background: lighten($sidebar-sub-item-background, 10%);
 $sidebar-sub-item-active-background: #FEC804;
