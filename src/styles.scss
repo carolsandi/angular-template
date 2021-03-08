@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./assets/scss/variables";
 body {
 	background: #3e434e;
 }
@@ -10,27 +11,33 @@ body {
 		margin-left: 230px;
 		top: 0;
     .navbar-bg {
-      background: #38a2d1;
+      background: $navbar-background;
     }
-    .navbar .nav {
-      a {
-        color: aliceblue;
-        text-decoration: none;
-        &:hover {
-          color: #bbeaff;
-        }
-      }
-      .dropdown .dropdown-menu {
-        background: #3e434e;
-        .dropdown-item:hover {
-          background: lighten(#3e434e, 10%);
-        }
-      }
-    }
+    .navbar {
+			.navbar-brand:hover {
+				cursor: pointer;
+				color: $navbar-light-color;
+			}
+			.nav {
+				a {
+					color: $navbar-color;
+					text-decoration: none;
+					&:hover {
+						color: $navbar-light-color;
+					}
+				}
+				.dropdown .dropdown-menu {
+					background: $navbar-dropdown-background;
+					.dropdown-item:hover {
+						background: $navbar-dropdown-light-background;
+					}
+				}
+			}
+		}
   }
   .sidebar {
 		z-index: 1;
-		background: #3e434e;
+		background: $sidebar-background;
 		position: fixed;
 		top: 0;
 		width: 230px;
@@ -64,7 +71,7 @@ body {
 						overflow: hidden;
 						.menu-btn {
 							&:hover {
-								color: #eee;
+								color: $sidebar-item-color;
 							}
 							i {
 								margin-right: 0;
@@ -76,7 +83,7 @@ body {
 							}
 						}
 						.sub-menu {
-							background: #FCA402;
+							background: $sidebar-sub-item-background;
 							overflow: hidden;
 							max-height: 0;
 							transition: 0.3s;
@@ -84,7 +91,7 @@ body {
 							a {
 								display: block;
 								position: relative;
-								color: #323744;
+								color: $sidebar-sub-item-color;
 								white-space: nowrap;
 								font-size: 13px;
 								padding: 10px 20px;
@@ -92,8 +99,8 @@ body {
 								transition: 0.3s;
 								transition-property: background, color;
 								&:hover {
-									background: #FEC804;
-									color: #3e434e;
+									background: $sidebar-sub-item-light-background;
+									color: $sidebar-sub-item-color;
 									text-decoration: none;
 								}
 							}
@@ -104,7 +111,7 @@ body {
 							}
 						}
 					}
-					background: #FCA402;
+					background: $sidebar-sub-item-background;
 					overflow: hidden;
 					max-height: 0;
 					transition: 0.3s;
@@ -120,13 +127,13 @@ body {
 						transition: 0.3s;
 						transition-property: background, color;
 						&:hover {
-							background: #FEC804;
-							color: #3e434e;
+							background: $sidebar-sub-item-light-background;
+							color: $sidebar-sub-item-color;
 							text-decoration: none;
 						}
 					}
 					a.active {
-						background: #FEC804;
+						background: $sidebar-sub-item-active-background;
 					}
 					i {
 						padding-right: 20px;
@@ -140,14 +147,14 @@ body {
 				}
 				.menu-btn {
 					display: block;
-					color: #fff;
+					color: $sidebar-item-color;
 					font-size: 14px;
 					position: relative;
 					padding: 15px 20px;
 					transition: 0.3s;
 					transition-property: color;
 					&:hover {
-						color: #FEC804;
+						color: $sidebar-item-light-color;
 						text-decoration: none;
 					}
 					i {
@@ -172,7 +179,7 @@ body {
 		margin-top: 0;
 		margin-left: 230px;
 		padding: 15px;
-		background: whitesmoke;
+		background: $light-color;
 		height: 100vh;
 	}
 }

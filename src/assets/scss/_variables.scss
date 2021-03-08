@@ -1,0 +1,16 @@
+$dark-color: #3e434e;
+$light-color: #f5f5f5;
+
+$navbar-background: #38a2d1;
+$navbar-color: #fff;
+$navbar-light-color: #bbeaff;
+$navbar-dropdown-background: #3e434e;
+$navbar-dropdown-light-background: lighten($navbar-dropdown-background, 10%);
+
+$sidebar-background: #3e434e;
+$sidebar-item-color: #fff;
+$sidebar-item-light-color: #FEC804;
+$sidebar-sub-item-color: #3e434e;
+$sidebar-sub-item-background: #FCA402;
+$sidebar-sub-item-light-background: lighten($sidebar-sub-item-background, 10%);
+$sidebar-sub-item-active-background: #FEC804;
