@@ -100,7 +100,7 @@ body {
 								transition-property: background, color;
 								&:hover {
 									background: $sidebar-sub-item-light-background;
-									color: $sidebar-sub-item-color;
+									color: $sidebar-sub-item-light-color;
 									text-decoration: none;
 								}
 							}
